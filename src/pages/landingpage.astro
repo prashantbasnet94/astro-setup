@@ -1,0 +1,19 @@
+---
+import Card from '../components/Card.astro';
+import MyReactComponent from '../components/MyReactComponent.tsx';
+
+---
+<html>
+<head>
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+  <body>
+    <h1>Use React components directly in Astro!</h1>
+    <Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+      <MyReactComponent/>
+  </body>
+</html>

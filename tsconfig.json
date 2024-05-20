@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "jsxImportSource": "react"
+  },
+  "extends": "astro/tsconfigs/strict"
+}
