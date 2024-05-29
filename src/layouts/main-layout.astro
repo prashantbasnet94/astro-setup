@@ -6,6 +6,7 @@ import Header from '@/components/layout/header.astro';
 import Footer from "@/components/Footer.astro";
 // import { marketingConfig } from "@/config/marketing";
 // import MainNav from "@/components/layout/main-nav.astro";
+import "@/styles/global.css";
 
 type Props = {
   title: string;
@@ -15,6 +16,7 @@ type Props = {
 
 const { title, description, mainClass } = Astro.props;
 ---
+
 
 <BaseLayout title={title} description={description}>
 
