@@ -19,8 +19,10 @@ const { title, description, mainClass } = Astro.props;
 <BaseLayout title={title} description={description}>
 
   <!-- Setting up Header -->
-  <Header />
-  <main class={cn(mainClass)}>
+  <Header className="border-b">
+  </Header>
+
+    <main class={cn(mainClass)}>
     <slot />
   </main>
   <Footer/>
