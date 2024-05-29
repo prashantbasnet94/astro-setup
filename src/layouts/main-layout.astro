@@ -1,16 +1,25 @@
+---
 
-As a main layout we are going to setup
+import { cn } from "../lib/utils";
+import BaseLayout from "./base-layout.astro";
+
+// import { marketingConfig } from "@/config/marketing";
+// import MainNav from "@/components/layout/main-nav.astro";
+
+type Props = {
+  title: string;
+  description?: string;
+  mainClass?: string;
+};
+
+const { title, description, mainClass } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
 
 
-<Header/>
-<Main/>
-<Footer/>
+  <main class={cn(mainClass)}>
+    <slot />
+  </main>
 
-
-and these are wrapped by our BaseLayout
-
-<BaseLayout>
-    <Header/>
-    <Main/>
-    <Footer/>
 </BaseLayout>
