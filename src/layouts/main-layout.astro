@@ -7,6 +7,7 @@ import Footer from "@/components/Footer.astro";
 // import { marketingConfig } from "@/config/marketing";
 // import MainNav from "@/components/layout/main-nav.astro";
 import "@/styles/global.css";
+import { MainNavigationMenu } from "@/components/main-navigation-menu";
 
 type Props = {
   title: string;
@@ -22,6 +23,8 @@ const { title, description, mainClass } = Astro.props;
 
   <!-- Setting up Header -->
   <Header className="border-b">
+    <MainNavigationMenu slot="left-header" client:load />
+
   </Header>
 
     <main class={cn(mainClass)}>
