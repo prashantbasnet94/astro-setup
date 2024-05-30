@@ -1,5 +1,6 @@
 ---
 // NOTE: work with { Toaster } from "@/components/ui/sonner" but need to update dark theme
+import BaseHead from "@/components/layout/base-head.astro";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -15,7 +16,7 @@ const { title, description, bodyClass } = Astro.props;
 
 <html lang="en" class="scroll-smooth">
   <head>
-    <!-- <BaseHead title={title} description={description} /> -->
+    <BaseHead title={title} description={description} />
   </head>
   <body class={cn("flex flex-col min-h-screen", bodyClass)}>
     <slot />

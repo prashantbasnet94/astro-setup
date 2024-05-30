@@ -1,9 +1,18 @@
 ---
 
 import MainLayout from "@/layouts/main-layout.astro";
-
+import PageHeader from "@/components/page-header.astro";
 ---
 
 <MainLayout title="">
-	Setup in Progress
-</MainLayout>
+	<div class="bg-background-200">
+		<section class="container py-12">
+		  <PageHeader
+			heading="Discovery"
+			text="Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Fully Open Source."
+		  />
+
+
+		</section>
+	  </div>
+	</MainLayout>
