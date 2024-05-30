@@ -40,19 +40,18 @@ Optimized production build totals only 178kb, ensuring quick load times and an e
 
 - Loads in less than 3 seconds on a fast 3G network.
 - Loads in less than 10 seconds on a slow 3G network.
-
-
-
 ![blog](public/stats.png)
+
 
 ## Lighthouse Report
 Lighthouse score of 100, indicating that it meets the highest standards in performance, accessibility, best practices, and SEO. This makes it an excellent choice for developers looking to build high-quality web applications.
 ![blog](public/lighthouse.png)
 
-
 ## Component Diagram
 ![blog](public/AstroLayoutDiagram.drawio.svg)
 
+## Application Design
+![blog](public/screenshot.png)
 
 Clone this repository to get started with your project:
 
