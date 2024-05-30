@@ -2,6 +2,10 @@
 
 import MainLayout from "@/layouts/main-layout.astro";
 import PageHeader from "@/components/page-header.astro";
+import ExampleGrid from "@/components/example-grid.astro";
+import { navMenuConfig } from "@/config/nav-menu";
+
+const pages = navMenuConfig.pagesNav[0].items;
 ---
 
 <MainLayout title="">
@@ -12,6 +16,7 @@ import PageHeader from "@/components/page-header.astro";
 			text="Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Fully Open Source."
 		  />
 
+		  <ExampleGrid title="Pages" items={pages} />
 
 		</section>
 	  </div>
