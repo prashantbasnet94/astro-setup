@@ -1,22 +1,19 @@
 ---
-
-import MainLayout from "@/layouts/main-layout.astro";
-import PageHeader from "@/components/page-header.astro";
-import ExampleGrid from "@/components/example-grid.astro";
-import { navMenuConfig } from "@/config/nav-menu";
-
-const pages = navMenuConfig.pagesNav[0].items;
+import MainLayout from '@/layouts/main-layout.astro';
+import HeroLanding from "@/components/sections/hero-landing.astro"
+import PreviewLanding from "@/components/sections/preview-landing.astro"
+import BentoGrid from "@/components/sections/bentogrid.astro"
+import InfoLanding from "@/components/sections/info-landing.astro"
+import { infos } from "@/config/landing";
+import Features from '@/components/sections/features.astro';
+import Testimonials from '@/components/sections/testimonials.astro';
+console.log("Check if this log is displayed");
 ---
-
-<MainLayout title="unisala">
-	<div class="bg-background-200">
-		<section class="container py-12">
-		  <PageHeader
-			heading="Discovery"
-			text="Differents pages and examples apps built with Astro v4.5, shadcn/ui & react js. Fully Open Source."
-		  />
-
-		  <ExampleGrid title="Pages" items={pages} />
-		</section>
-	  </div>
-	</MainLayout>
+<MainLayout title ="landing page">
+  <HeroLanding/>
+  <PreviewLanding />
+  <BentoGrid />
+  <InfoLanding data={infos[0]} reverse={true} />
+  <Features />
+  <Testimonials />
+</MainLayout>
