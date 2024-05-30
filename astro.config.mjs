@@ -1,6 +1,6 @@
 import {defineConfig} from 'astro/config';
 import react from '@astrojs/react';
-import astroIcon from 'astro-icon';
+import icons from 'astro-icon';
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
@@ -10,7 +10,14 @@ export default defineConfig({
     port: 1234
   },
   renderers: [ react() ],
-  integrations: [ react(), astroIcon(),
+  integrations: [
+    react(),
+    icons({
+      collections: {
+        // Ensure 'lucide' is included here
+        lucide: '@iconify-json/lucide'
+      }
+    }),
     tailwind({applyBaseStyles: false}),
     sitemap() ],
   output: "hybrid",
